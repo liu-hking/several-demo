@@ -1,0 +1,88 @@
+.px2rem(@width:750px){
+  @media (max-width: @width) {
+    html{
+      font-size: @width/750*100px;
+    }
+  }
+}
+html{font-size: 100px;}
+.px2rem();
+.px2rem(720px);
+.px2rem(640px);
+.px2rem(540px);
+.px2rem(480px);
+.px2rem(424px);
+.px2rem(414px);
+.px2rem(400px);
+.px2rem(384px);
+.px2rem(375px);
+.px2rem(360px);
+.px2rem(320px);
+
+.drx-header{
+  height: 85/75rem;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  line-height: 85/75rem;
+  font-size: 30/75rem;
+  div{
+    float: left;
+    &:nth-child(2){
+      margin-left:150/75rem;
+      color: red;
+    }
+    &:nth-child(3){
+      position: relative;
+      a{
+        color: gray;
+        text-decoration: none;
+      }
+      span{
+        position: absolute;
+        top:25/75rem;
+        right:-30/75rem;
+        height: 30/75rem;
+        line-height:30/75rem;
+        text-align: center;
+        color: white;
+        border-radius: 15/75rem;
+        width: 30/75rem;
+        background-color: gray;
+      }
+      float: right;
+      margin-right: 30/75rem;
+    }
+  }
+}
+//导航部分
+.drx-nav{
+  height: 78/75rem;
+  width:100%;
+  border-bottom: 1px solid gray;
+  font-size: 25/75rem;
+  ul{
+    padding-left: 80/75rem;
+    li{
+      float: left;
+      line-height: 78/75rem;
+      height:78/75rem;
+      box-sizing: border-box;
+      &:nth-child(2){
+        margin-left: 100/75rem;
+        margin-right: 100/75rem;
+      }
+      &.current{
+        border-bottom: 2px solid red;
+
+        a{
+          color: red;
+        }
+      }
+      a{
+        color: gray;
+      }
+    }
+    
+  }
+}
+

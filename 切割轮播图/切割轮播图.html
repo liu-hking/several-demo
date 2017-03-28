@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            width: 560px;
+            height: 380px;
+            margin:100px auto;
+            border: 1px solid #000;
+            position: relative;
+            list-style: none;
+            padding:0;
+        }
+
+        li {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        li > div{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        div:nth-child(1){
+            background: url("../imgs/01.jpg") no-repeat;
+            transform: rotateX(0deg) translateZ(190px);
+        }
+        div:nth-child(2){
+            background: url("../imgs/02.jpg") no-repeat;
+            transform: rotateX(90deg) translateZ(190px);
+        }
+        div:nth-child(3){
+            background: url("../imgs/03_kis.jpg") no-repeat;
+            transform: rotateX(180deg) translateZ(190px);
+        }
+        div:nth-child(4){
+            background: url("../imgs/04_kiss.jpg") no-repeat;
+            transform: rotateX(270deg) translateZ(190px);
+        }
+
+        /*li:hover{*/
+            /*transform: rotateX(360deg);*/
+        /*}*/
+
+
+        /* 伪元素 长个东西只能用来  制作 外观 不能 绑定js事件 */
+        /* 为a标签 设置外观-通用的外观 */
+
+        a {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: gray;
+            line-height: 50px;
+            font-size: 50px;
+            font-weight: 900;
+        }
+        /* 设置左右a标签的位置 */
+
+        .left {
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .right {
+            right: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        /* 为li标签 添加过渡的效果 */
+
+        li {
+            transition: all 1s;
+            /* 为了 一行 2个 li标签的 宽度 需要修改 */
+            width: 25%;
+            float: left;
+        }
+
+        li:nth-child(2) {
+            transition: all 1s .2s;
+        }
+        /* 修改 第二个li标签 中 div的 backgroun-position 即可 */
+
+        li:nth-child(2) div {
+            background-position: -140px 0px;
+        }
+
+        li:nth-child(3) {
+            transition: all 1s .3s;
+        }
+        /* 修改 第二个li标签 中 div的 backgroun-position 即可 */
+
+        li:nth-child(3) div {
+            background-position: -280px 0px;
+        }
+
+        li:nth-child(4) {
+            transition: all 1s .4s;
+        }
+        /* 修改 第二个li标签 中 div的 backgroun-position 即可 */
+
+        li:nth-child(4) div {
+            background-position: -420px 0px;
+        }
+    </style>
+    <script></script>
+</head>
+<body>
+<ul>
+    <li>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </li>
+    <li>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </li>
+    <li>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </li>
+    <li>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </li>
+    <a href="javascript:void(0)" class="left"></a>
+    <a href="javascript:void(0)" class="right"></a>
+</ul>
+</body>
+<script src="../js/jquery-3.0.0.min.js"></script>
+<script>
+    var number=0;
+    $(".right").click(function () {
+        console.log(123)
+
+        number++;
+        $("li").css({
+            transform:'rotateX('+number*90+'deg)'
+        })
+
+    })
+</script>
+</html>

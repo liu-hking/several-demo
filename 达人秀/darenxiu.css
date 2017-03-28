@@ -1,0 +1,126 @@
+html {
+  font-size: 100px;
+}
+@media (max-width: 750px) {
+  html {
+    font-size: 100px;
+  }
+}
+@media (max-width: 720px) {
+  html {
+    font-size: 96px;
+  }
+}
+@media (max-width: 640px) {
+  html {
+    font-size: 85.33333333px;
+  }
+}
+@media (max-width: 540px) {
+  html {
+    font-size: 72px;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 64px;
+  }
+}
+@media (max-width: 424px) {
+  html {
+    font-size: 56.53333333px;
+  }
+}
+@media (max-width: 414px) {
+  html {
+    font-size: 55.2px;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 53.33333333px;
+  }
+}
+@media (max-width: 384px) {
+  html {
+    font-size: 51.2px;
+  }
+}
+@media (max-width: 375px) {
+  html {
+    font-size: 50px;
+  }
+}
+@media (max-width: 360px) {
+  html {
+    font-size: 48px;
+  }
+}
+@media (max-width: 320px) {
+  html {
+    font-size: 42.66666667px;
+  }
+}
+.drx-header {
+  height: 1.13333333rem;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  line-height: 1.13333333rem;
+  font-size: 0.4rem;
+}
+.drx-header div {
+  float: left;
+}
+.drx-header div:nth-child(2) {
+  margin-left: 2rem;
+  color: red;
+}
+.drx-header div:nth-child(3) {
+  position: relative;
+  float: right;
+  margin-right: 0.4rem;
+}
+.drx-header div:nth-child(3) a {
+  color: gray;
+  text-decoration: none;
+}
+.drx-header div:nth-child(3) span {
+  position: absolute;
+  top: 0.33333333rem;
+  right: -0.4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  text-align: center;
+  color: white;
+  border-radius: 0.2rem;
+  width: 0.4rem;
+  background-color: gray;
+}
+.drx-nav {
+  height: 1.04rem;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 0.33333333rem;
+}
+.drx-nav ul {
+  padding-left: 1.06666667rem;
+}
+.drx-nav ul li {
+  float: left;
+  line-height: 1.04rem;
+  height: 1.04rem;
+  box-sizing: border-box;
+}
+.drx-nav ul li:nth-child(2) {
+  margin-left: 1.33333333rem;
+  margin-right: 1.33333333rem;
+}
+.drx-nav ul li.current {
+  border-bottom: 2px solid red;
+}
+.drx-nav ul li.current a {
+  color: red;
+}
+.drx-nav ul li a {
+  color: gray;
+}
